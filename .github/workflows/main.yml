@@ -1,0 +1,21 @@
+name: Push Rent Info to TG Bot
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9"]
+        
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          cache: 'pip' # caching pip dependencies
+      - run: pip install -r requirements.txt
+      - run: python run.py --token ${{ secrets.BOT_TOKEN }} --chat ${{ secrets.CHAT_ID }}
+
