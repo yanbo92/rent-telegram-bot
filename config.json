@@ -1,6 +1,8 @@
 {
   "url": "http://uz.yurixu.com/uz/index/getList",
-  "filter": ["整租"],
+  "filter": [
+    "整租"
+  ],
   "params": [
     {
       "city": "shenzhen",
@@ -14,8 +16,7 @@
       "lineid": "",
       "siteid": "27",
       "zone": "0",
-      "date": "1"
-,
+      "date": "7",
       "room": "0",
       "gender": "0",
       "source": "0",
@@ -33,8 +34,7 @@
       "lineid": "",
       "siteid": "28",
       "zone": "0",
-      "date": "1"
-,
+      "date": "7",
       "room": "0",
       "gender": "0",
       "source": "0",
@@ -52,8 +52,7 @@
       "lineid": "0",
       "siteid": "0",
       "zone": "0",
-      "date": "1"
-,
+      "date": "7",
       "room": "0",
       "gender": "0",
       "source": "0",
@@ -72,8 +71,7 @@
       "lineid": "0",
       "siteid": "0",
       "zone": "0",
-      "date": "1"
-,
+      "date": "7",
       "room": "0",
       "gender": "0",
       "source": "0",
@@ -92,8 +90,7 @@
       "lineid": "0",
       "siteid": "0",
       "zone": "0",
-      "date": "1"
-,
+      "date": "7",
       "room": "0",
       "gender": "0",
       "source": "0",
@@ -112,8 +109,7 @@
       "lineid": "0",
       "siteid": "0",
       "zone": "0",
-      "date": "1"
-,
+      "date": "7",
       "room": "0",
       "gender": "0",
       "source": "0",
@@ -132,8 +128,7 @@
       "lineid": "0",
       "siteid": "0",
       "zone": "0",
-      "date": "1"
-,
+      "date": "7",
       "room": "0",
       "gender": "0",
       "source": "0",
