@@ -1,6 +1,8 @@
 name: Push Rent Info to TG Bot
 
-on: [push]
+on: 
+  schedule:
+    - cron: '58 7,15,23 * * *'
 
 jobs:
   build:
@@ -15,7 +17,7 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-          cache: 'pip' # caching pip dependencies
+          cache: 'pip'
       - run: pip install -r requirements.txt
       - run: python run.py --token ${{ secrets.BOT_TOKEN }} --chat ${{ secrets.CHAT_ID }}
 
