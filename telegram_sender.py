@@ -13,7 +13,7 @@ class TelegramSender:
         return f"[{self.houses[house]}]({house})"
 
     def generate_normal_text(self, house) -> str:
-        return f"url:{self.houses[house]}, title:{house}"
+        return f"url:{house}, title:{self.houses[house]}"
 
     def send_markdown(self, text, chat_id):
         self.bot.send_message(text=text, chat_id=chat_id, parse_mode="Markdown")

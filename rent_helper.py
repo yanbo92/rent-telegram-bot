@@ -25,10 +25,10 @@ class RentHelper(Session):
             for data in datalist:
                 # time style 2022-08-07 22:59:41
                 # within 8 hours
-                # if abs(time.mktime(time.strptime(data["pub_time"], '%Y-%m-%d %H:%M:%S')) - time.time()) < 29000:
-                for f in self.filters:
-                    if f in data["title"]:
-                        result[data["url"]] = data["title"]
+                if abs(time.mktime(time.strptime(data["pub_time"], '%Y-%m-%d %H:%M:%S')) - time.time()) < 29000:
+                    for f in self.filters:
+                        if f in data["title"]:
+                            result[data["url"]] = data["title"]
         return result
 
 
