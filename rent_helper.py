@@ -1,6 +1,10 @@
 import time
+import logging
 from requests import Session
 from utils import read_json
+
+logging.basicConfig(level=logging.INFO)
+log = logging.getLogger(__name__)
 
 
 class RentHelper(Session):
@@ -22,13 +26,17 @@ class RentHelper(Session):
         result = {}
         for param in self.params:
             datalist = self.get_datalist(param=param)
+            log.info(f"origin data : {datalist}")
             for data in datalist:
                 # time style 2022-08-07 22:59:41
                 # within 8 hours
-                if abs(time.mktime(time.strptime(data["pub_time"], '%Y-%m-%d %H:%M:%S')) - time.time()) < 29000:
+                # if abs(time.mktime(time.strptime(data["pub_time"], '%Y-%m-%d %H:%M:%S')) - time.time()) < 29000:
+                if len(self.filters) > 0:
                     for f in self.filters:
                         if f in data["title"]:
                             result[data["url"]] = data["title"]
+                else:
+                    result[data["url"]] = data["title"]
         return result
 
 
