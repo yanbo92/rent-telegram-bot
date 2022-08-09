@@ -2,7 +2,7 @@ name: Push Rent Info to TG Bot
 
 on: 
   schedule:
-    - cron: '58 7,15,23 * * *'
+    - cron: '0 0 29 2 1'
 
 jobs:
   build:
